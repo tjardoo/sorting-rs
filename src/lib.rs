@@ -1,25 +1,17 @@
 pub trait Sorter {
-    fn sort<T>(slice: &mut [T]) where T: Ord;
-}
-
-pub fn sort<T, S>(slice: &mut [T])
-    where
-        T: Ord,
-        S: Sorter,
-{
-    S::sort(slice)
+    fn sort<T>(&self, slice: &mut [T]) where T: Ord;
 }
 
 mod algorithms;
 
 #[cfg(test)]
 mod tests {
-    use crate::{Sorter, sort};
+    use crate::Sorter;
 
     struct StdSorter;
 
     impl Sorter for StdSorter {
-        fn sort<T>(slice: &mut [T]) where T: Ord {
+        fn sort<T>(&self, slice: &mut [T]) where T: Ord {
             slice.sort()
         }
     }
@@ -28,7 +20,7 @@ mod tests {
     fn std_sorter_works() {
         let mut things = vec![4, 2, 3, 1];
 
-        sort::<_, StdSorter>(&mut things);
+        StdSorter.sort(&mut things);
 
         assert_eq!(things, &[1, 2, 3, 4]);
     }
