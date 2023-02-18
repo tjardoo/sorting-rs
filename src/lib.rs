@@ -10,6 +10,8 @@ pub fn sort<T, S>(slice: &mut [T])
     S::sort(slice)
 }
 
+mod algorithms;
+
 #[cfg(test)]
 mod tests {
     use crate::{Sorter, sort};
