@@ -4,17 +4,17 @@ pub trait Sorter {
 
 pub mod algorithms;
 
+pub struct StdSorter;
+
+impl Sorter for StdSorter {
+    fn sort<T>(&self, slice: &mut [T]) where T: Ord {
+        slice.sort();
+    }
+}
+
 #[cfg(test)]
 mod tests {
-    use crate::Sorter;
-
-    struct StdSorter;
-
-    impl Sorter for StdSorter {
-        fn sort<T>(&self, slice: &mut [T]) where T: Ord {
-            slice.sort()
-        }
-    }
+    use super::*;
 
     #[test]
     fn std_sorter_works() {
