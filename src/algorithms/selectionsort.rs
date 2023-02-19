@@ -1,7 +1,7 @@
 use crate::Sorter;
 
 pub struct Selectionsort {
-    enumerate: bool,
+    pub enumerate: bool,
 }
 
 impl Sorter for Selectionsort {

@@ -24,11 +24,20 @@ fn quicksort<T: Ord>(slice: &mut [T]) {
         if &rest[left] <= pivot {
             left += 1;
         }  else if &rest[right] > pivot {
+            if right == 0 {
+                break;
+            }
+
             right -= 1;
         } else {
             rest.swap(left, right);
 
             left += 1;
+
+            if right == 0 {
+                break;
+            }
+
             right -= 1;
         }
     }
