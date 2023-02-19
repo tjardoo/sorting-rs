@@ -6,3 +6,6 @@ pub use insertionsort::Insertionsort;
 
 mod selectionsort;
 pub use selectionsort::Selectionsort;
+
+mod quicksort;
+pub use quicksort::Quicksort;

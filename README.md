@@ -20,6 +20,10 @@ Insertion sort is a simple comparison-based sorting algorithm that builds the fi
 
 Selection sort is a simple comparison-based sorting algorithm that repeatedly selects the smallest element from the unsorted part of the array and moves it to the front. It works by dividing the input array into two parts: the sorted part at the beginning and the unsorted part at the end.
 
+### Quick
+
+Quicksort is a popular comparison-based sorting algorithm that uses a divide-and-conquer approach to sort an array. It works by selecting a pivot element, partitioning the array around the pivot, and recursively sorting the left and right subarrays.
+
 ## Testing
 
 ```rs
