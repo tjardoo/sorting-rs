@@ -1,9 +1,11 @@
 # Sorting in Rust
 
+YouTube video: [https://www.youtube.com/watch?v=h4RkCyJyXmM&t](https://www.youtube.com/watch?v=h4RkCyJyXmM&t)
+
 ## Usage
 
 ```rs
-// todo
+cargo run --bin bench
 ```
 
 ## Sorting Algorithms
